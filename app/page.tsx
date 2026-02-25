@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import Link from "next/link"
+import AuthSection from "./components/AuthSection"
 
 export default function Home() {
   return (
@@ -25,6 +26,13 @@ export default function Home() {
             Learn More
           </Button>
         </div>
+      </section>
+
+      <Separator className="my-12 bg-white/10" />
+
+      {/* Auth Section */}
+      <section className="container mx-auto px-4 py-16 flex justify-center">
+        <AuthSection />
       </section>
 
       <Separator className="my-12 bg-white/10" />
