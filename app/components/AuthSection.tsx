@@ -43,7 +43,12 @@ export default function AuthSection() {
       </CardHeader>
       <CardContent className="space-y-3">
         <Button
-          onClick={() => signIn.social({ provider: "google" })}
+          onClick={async () => {
+            await signIn.social({ 
+              provider: "google",
+              callbackURL: "/",
+            });
+          }}
           className="w-full bg-white hover:bg-gray-100 text-gray-900"
         >
           <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
@@ -55,7 +60,12 @@ export default function AuthSection() {
           Continue with Google
         </Button>
         <Button
-          onClick={() => signIn.social({ provider: "github" })}
+          onClick={async () => {
+            await signIn.social({ 
+              provider: "github",
+              callbackURL: "/",
+            });
+          }}
           className="w-full bg-gray-900 hover:bg-gray-800 text-white"
         >
           <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
