@@ -3,8 +3,8 @@ import { nextCookies } from "better-auth/next-js";
 
 export const auth = betterAuth({
   database: {
-    provider: "sqlite",
-    url: process.env.DATABASE_URL || "file:./data/auth.db",
+    provider: "mongodb",
+    url: process.env.MONGODB_URI || "",
   },
   emailAndPassword: {
     enabled: true,
